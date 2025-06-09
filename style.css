@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: gold;
+}
+
+.container>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    padding: 1.5rem;
+    border: 1px solid gold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    gap: 1rem;
+
+    grid-template-rows: 100px repeat(5, 300px) 150px;
+
+    /* VARIANTAS 1  */
+    grid-template-areas: "hd hd hd"
+    "hero hero hero"
+    "s1 s1 s2"
+    "s3 s4 s4"
+    "s5 s5 s6"
+    "promo promo promo"
+    "ft ft ft";
+}
+
+header {
+    grid-area: hd;
+}
+.hero {
+    grid-area: hero;
+}
+.section-1 {
+    grid-area: s1;
+}
+.section-2 {
+    grid-area: s2;
+}
+.section-3 {
+    grid-area: s3;
+}
+.section-4 {
+    grid-area: s4;
+}
+.section-5 {
+    grid-area: s5;
+}
+.section-6 {
+    grid-area: s6;
+}
+.promo {
+    grid-area: promo;
+}
+footer {
+    grid-area: ft;
+}
